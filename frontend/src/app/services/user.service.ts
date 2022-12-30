@@ -7,11 +7,14 @@ import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
 import { User } from '../shared/models/User';
 
+const USER_KEY = 'User';
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  private userSubject = new BehaviorSubject<User>(new User());
+  private userSubject = new BehaviorSubject<User>(
+    this.getUserFromLocalStorage()
+  );
   public userObservable: Observable<User>;
   constructor(private http: HttpClient, private toastrService: ToastrService) {
     this.userObservable = this.userSubject.asObservable();
