@@ -42,7 +42,7 @@ router.post(
 router.post(
   "/register",
   asyncHandler(async (req, res) => {
-    const { name, email, password, address } = req.body;
+    const { name, email, password, address, age } = req.body;
     const user = await UserModel.findOne({ email });
     if (user) {
       res.status(HTTP_BAD_REQUEST).send("User is already exist, please login!");
@@ -57,6 +57,7 @@ router.post(
       email: email.toLowerCase(),
       password: encryptedPassword,
       address,
+      age,
       isAdmin: false,
     };
 
@@ -79,44 +80,5 @@ const generateTokenResponse = (user: any) => {
   user.token = token;
   return user;
 };
-
-//     //const encryptedPassword = await bcrypt.hash(password, 10);
-
-//     const newUser: User = {
-//       id: "",
-//       name,
-//       email: email.toLowerCase(),
-//       password,
-//       address,
-//       isAdmin: false,
-//     };
-
-//     const dbUser = await UserModel.create(newUser);
-//     res.send(generateTokenReponse(dbUser));
-//   })
-// );
-
-// const generateTokenReponse = (user: User) => {
-//   const token = jwt.sign(
-//     {
-//       id: user.id,
-//       email: user.email,
-//       isAdmin: user.isAdmin,
-//     },
-//     process.env.JWT_SECRET!,
-//     {
-//       expiresIn: "30d",
-//     }
-//   );
-
-//   return {
-//     id: user.id,
-//     email: user.email,
-//     name: user.name,
-//     address: user.address,
-//     isAdmin: user.isAdmin,
-//     token: token,
-//   };
-// };
 
 export default router;

@@ -30,6 +30,7 @@ router.get(
   "/search/:searchTerm",
   asyncHandler(async (req, res) => {
     const searchRegex = new RegExp(req.params.searchTerm, "i");
+
     const foods = await FoodModel.find({ name: { $regex: searchRegex } });
     res.send(foods);
   })
