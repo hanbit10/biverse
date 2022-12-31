@@ -3,44 +3,27 @@
     <app-title title="Login"></app-title>
 
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
-      <!--
-      <text-input
-      [control]="fc.email"
-      [showErrorsWhen]="isSubmitted"
-      type="email"
-      label="Email">
-    </text-input>
 
-  <text-input
-  [control]="fc.password"
-  [showErrorsWhen]="isSubmitted"
-  type="password"
-  label="Password">
-</text-input>
+      <text-input [control]="fc['email']" [showErrorsWhen]="isSubmitted" type="email" label="Email">
+      </text-input>
 
-    <default-button text="Login"></default-button>
-    <div class="register">
-      New user? &nbsp;
-      <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
-        Register here
-      </a>
-    </div> -->
+      <text-input [control]="fc['password']" [showErrorsWhen]="isSubmitted" type="password" label="Password">
+      </text-input>
 
-      <div class="input-container">
-        <label>Email</label>
-        <div>
-          <input type="email" placeholder="Email" formControlName="email" />
-        </div>
+      <default-button text="Login"></default-button>
+      <div class="register">
+        New user? &nbsp;
+        <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
+          Register here
+        </a>
       </div>
-      <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
-        <div *ngIf="fc['email'].errors['required']">
-          Should not be empty
-        </div>
-        <div *ngIf="fc['email'].errors['email']">
-          Email not correct
-        </div>
-      </div>
-      <div class="input-container">
+
+      <!-- <input-container label="Email">
+        <input type="email" placeholder="Email" formControlName="email" />
+        <input-validation [control]="fc['email']" [showErrorsWhen]="isSubmitted"></input-validation>
+      </input-container> -->
+
+      <!-- <div class="input-container">
         <label>Password</label>
         <div>
           <input type="password" placeholder="Password" formControlName="password" />
@@ -51,11 +34,11 @@
             Should not be empty
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="button">
+      <!-- <div class="button">
         <button type="submit">Login</button>
-      </div>
+      </div> -->
     </form>
   </div>
 </div>
