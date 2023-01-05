@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,41 +6,46 @@
   margin-top: 3rem;
 }
 
-.details{
+.details {
   width: 25rem;
 }
 
-.login{
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 $primary-color: #004643;
-$secondary-color: #F9BC60;
-$tertiary-color: #E16162;
-$background-color: #FEF6ED;
-$white: #FFFFFF;
+$secondary-color: #f9bc60;
+$tertiary-color: #e16162;
+$background-color: #fef6ed;
+$white: #ffffff;
 $black: #000000;
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 /* Firefox */
-input[type=number] { -moz-appearance: textfield; }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
-.container{
+.container {
   max-width: 1024px;
   background-color: $background-color;
 }
 
-.layout{
+.layout {
   margin: auto;
   width: 290px;
   padding: 0;
 }
 
-.box-image{
+.box-image {
   margin: auto;
   margin-left: 0;
   width: 290px;
@@ -53,7 +58,7 @@ input[type=number] { -moz-appearance: textfield; }
   background-color: $white;
 }
 
-.button-image{
+.button-image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,16 +68,19 @@ input[type=number] { -moz-appearance: textfield; }
   font-size: 1rem;
 }
 
-input[name="sellbuy"]{
+input[name="sellbuy"] {
   margin-top: 10px;
   accent-color: $black;
 }
 
-title, .button-cancel, .button-register, .file-image {
+title,
+.button-cancel,
+.button-register,
+.file-image {
   display: none;
 }
 
-.form-field{
+.form-field {
   width: 215px;
   height: 35px;
   padding-left: 10px;
@@ -80,27 +88,29 @@ title, .button-cancel, .button-register, .file-image {
   margin-bottom: 20px;
   background-color: $white;
   border: 1px solid $black;
-  -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
-  appearance:none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
 }
 
-.form-field-two{
+.form-field-two {
   width: 290px;
   height: 107px;
 }
 
-.form-field-arrow{
-  background: url(https://img.icons8.com/android/24/null/sort-down.png) no-repeat scroll 185px 4px;
+.form-field-arrow {
+  background: url(https://img.icons8.com/android/24/null/sort-down.png)
+    no-repeat scroll 185px 4px;
   background-color: $white;
 }
 
-.form-field-euro{
-  background: url(https://img.icons8.com/metro/26/null/euro-pound-exchange.png) no-repeat scroll 185px 4px;
+.form-field-euro {
+  background: url(https://img.icons8.com/metro/26/null/euro-pound-exchange.png)
+    no-repeat scroll 185px 4px;
   background-color: $white;
 }
 
-.text{
+.text {
   display: inline-block;
   margin-top: 36px;
   margin-bottom: 0px;
@@ -110,11 +120,12 @@ title, .button-cancel, .button-register, .file-image {
   font-size: 1rem;
 }
 
-.text-type{
+.text-type {
   margin-top: 10px;
 }
 
-.text-type-two, .text-image{
+.text-type-two,
+.text-image {
   margin-top: 0px;
   height: 20px;
 }
@@ -125,47 +136,48 @@ title, .button-cancel, .button-register, .file-image {
 }
 
 @media (min-width: 768px) {
-
-  .layout{
+  .layout {
     width: 100%;
   }
 
-  .row >*{
-    width:50%;
+  .row > * {
+    width: 50%;
     display: inline-block;
   }
 
-  .row-button{
+  .row-button {
     display: flex;
     justify-content: space-around;
   }
 
-  title{
+  title {
     width: 100%;
     height: 70px;
     margin-inline: auto;
     display: flex;
     align-items: flex-end;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 3.4rem;
   }
 
-  .text, .text-button-radio{
+  .text,
+  .text-button-radio {
     font-size: 1.2rem;
   }
 
-  .text-type, .text-type-two{
+  .text-type,
+  .text-type-two {
     font-size: 1.2rem;
     height: 30px;
   }
 
-  .text-image{
+  .text-image {
     display: none;
   }
 
-  .form-field{
+  .form-field {
     width: 90%;
     height: 60px;
     font-size: 1.2rem;
@@ -173,24 +185,24 @@ title, .button-cancel, .button-register, .file-image {
     border: 1px solid $primary-color;
     background: $background-color;
     background-color: $background-color;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
   }
 
-  .form-field-two{
+  .form-field-two {
     width: 100%;
     height: 240px;
   }
 
-  .box-image{
+  .box-image {
     width: 100%;
     height: 420px;
     margin-top: 40px;
-    background-color: #E7E7E7;
+    background-color: #e7e7e7;
   }
 
-  .button{
+  .button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,22 +216,22 @@ title, .button-cancel, .button-register, .file-image {
     border: none;
   }
 
-  .button-image{
+  .button-image {
     width: 196px;
     height: 34px;
     font-size: 1.2rem;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     border-radius: 10px;
     font-weight: 500;
   }
 
-  .button-cancel{
+  .button-cancel {
     background: $background-color;
     color: $primary-color;
     border: 1px solid $primary-color;
   }
 
-  .button-register{
+  .button-register {
     background: $primary-color;
     color: $background-color;
   }
