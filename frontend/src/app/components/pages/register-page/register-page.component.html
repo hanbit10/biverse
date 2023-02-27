@@ -16,8 +16,12 @@
         type="password">
         `</text-input>
 
+      <text-input type="text" [control]="fc['age']" [showErrorsWhen]=" isSubmitted" label="Age">
+        `</text-input>
+
       <text-input [control]="fc['address']" [showErrorsWhen]=" isSubmitted" label="Address">
         `</text-input>
+
 
 
       <default-button text="Register"></default-button>

@@ -1,0 +1,25 @@
+<div class="container">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="layout">
+    <title>Upload New Item</title>
+    <div style="background-color: antiquewhite;">
+
+      <div class="form-group">
+        <label for="title">Name</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="food.name" name="name" />
+      </div>
+
+      <label class="text-button-radio" *ngFor="let x of cookTimeOption" for="myRadioId">
+        <input type="radio" id="myRadioId" name="sellbuy" [(ngModel)]="food.cookTime" [value]="x">
+        {{x}}
+      </label>
+
+      <button (click)="saveFood()" class="btn btn-success">Submit This is important</button>
+    </div>
+
+    <div class="row-button" [align]="'end'">
+      <button class="button button-register" (click)="addProduct()" routerLink="/">REGISTER</button>
+      <button mat-dialog-close class="button button-cancel" routerLink="/">CANCEL</button>
+    </div>
+  </div>
+</div>

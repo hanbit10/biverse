@@ -1,0 +1,238 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.details {
+  width: 25rem;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$primary-color: #004643;
+$secondary-color: #f9bc60;
+$tertiary-color: #e16162;
+$background-color: #fef6ed;
+$white: #ffffff;
+$black: #000000;
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  max-width: 1024px;
+  background-color: $background-color;
+}
+
+.layout {
+  margin: auto;
+  width: 290px;
+  padding: 0;
+}
+
+.box-image {
+  margin: auto;
+  margin-left: 0;
+  width: 290px;
+  height: 107px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px $black;
+  border-radius: 5px;
+  background-color: $white;
+}
+
+.button-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 196px;
+  height: 34px;
+  font-size: 1rem;
+}
+
+input[name="sellbuy"] {
+  margin-top: 10px;
+  accent-color: $black;
+}
+
+title,
+.button-cancel,
+.button-register,
+.file-image {
+  display: none;
+}
+
+.form-field {
+  width: 215px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 1px solid $black;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+.form-field-two {
+  width: 290px;
+  height: 107px;
+}
+
+.form-field-arrow {
+  background: url(https://img.icons8.com/android/24/null/sort-down.png)
+    no-repeat scroll 185px 4px;
+  background-color: $white;
+}
+
+.form-field-euro {
+  background: url(https://img.icons8.com/metro/26/null/euro-pound-exchange.png)
+    no-repeat scroll 185px 4px;
+  background-color: $white;
+}
+
+.text {
+  display: inline-block;
+  margin-top: 36px;
+  margin-bottom: 0px;
+  width: 75px;
+  height: 35px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.text-type {
+  margin-top: 10px;
+}
+
+.text-type-two,
+.text-image {
+  margin-top: 0px;
+  height: 20px;
+}
+
+.text-button-radio {
+  font-size: 1rem;
+  margin-right: 50px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    width: 100%;
+  }
+
+  .row > * {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .row-button {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  title {
+    width: 100%;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    align-items: flex-end;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.4rem;
+  }
+
+  .text,
+  .text-button-radio {
+    font-size: 1.2rem;
+  }
+
+  .text-type,
+  .text-type-two {
+    font-size: 1.2rem;
+    height: 30px;
+  }
+
+  .text-image {
+    display: none;
+  }
+
+  .form-field {
+    width: 90%;
+    height: 60px;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    border: 1px solid $primary-color;
+    background: $background-color;
+    background-color: $background-color;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  .form-field-two {
+    width: 100%;
+    height: 240px;
+  }
+
+  .box-image {
+    width: 100%;
+    height: 420px;
+    margin-top: 40px;
+    background-color: #e7e7e7;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 45%;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    font-style: normal;
+    border: none;
+  }
+
+  .button-image {
+    width: 196px;
+    height: 34px;
+    font-size: 1.2rem;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  .button-cancel {
+    background: $background-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+  }
+
+  .button-register {
+    background: $primary-color;
+    color: $background-color;
+  }
+}
