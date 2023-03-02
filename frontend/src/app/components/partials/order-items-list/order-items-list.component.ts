@@ -10,7 +10,5 @@ export class OrderItemsListComponent implements OnInit {
   @Input()
   order!: Order;
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }
