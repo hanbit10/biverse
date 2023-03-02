@@ -9,6 +9,7 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { UploadPageComponent } from './components/pages/upload-page/upload-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { AuthGuard } from './auth/guards/auth.guard';
 // import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 // import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 // import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
@@ -22,7 +23,11 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
   { path: 'upload', component: UploadPageComponent },
-  { path: 'checkout', component: CheckoutPageComponent },
+  {
+    path: 'checkout',
+    component: CheckoutPageComponent,
+    canActivate: [AuthGuard],
+  },
   // {
   //   path: 'checkout',
   //   component: CheckoutPageComponent,
