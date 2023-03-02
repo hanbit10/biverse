@@ -1,13 +1,10 @@
 import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
-// import { User, UserModel } from "../models/user.model";
-// import { HTTP_BAD_REQUEST } from "../constants/http_status";
-import bcrypt from "bcryptjs";
-
-import { sample_users } from "../data";
-import { Router } from "express";
 import { User, UserModel } from "../models/user.model";
 import { HTTP_BAD_REQUEST } from "../constants/http_status";
+import bcrypt from "bcryptjs";
+import { sample_users } from "../data";
+import { Router } from "express";
 
 const router = Router();
 
@@ -58,7 +55,7 @@ router.post(
       password: encryptedPassword,
       address,
       age,
-      isAdmin: false,
+      isAdmin: true,
     };
 
     const dbUser = await UserModel.create(newUser);
