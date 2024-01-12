@@ -1,7 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
 exports.__esModule = true;
 var dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1["default"].config();
@@ -15,10 +17,12 @@ var database_config_1 = require("./configs/database.config");
 (0, database_config_1.dbConnect)();
 var app = (0, express_1["default"])();
 app.use(express_1["default"].json());
-app.use((0, cors_1["default"])({
+app.use(
+  (0, cors_1["default"])({
     credentials: true,
-    origin: ["http://localhost:4200", "https://biverse.onrender.com"]
-}));
+    origin: ["https://biverse.onrender.com"],
+  })
+);
 ////////////////////////////////////////////////////
 app.use("/api/foods", food_router_1["default"]);
 app.use("/api/users", user_router_1["default"]);
@@ -35,9 +39,9 @@ app.use(express_1["default"].static("public"));
 //   next();
 // });
 app.get("*", function (req, res) {
-    res.sendFile(path_1["default"].join(__dirname, "public", "index.html"));
+  res.sendFile(path_1["default"].join(__dirname, "public", "index.html"));
 });
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
-    console.log("Website served on http://localhost:" + port);
+  console.log("Website served on http://localhost:" + port);
 });
