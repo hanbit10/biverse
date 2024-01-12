@@ -30,6 +30,7 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { MapComponent } from './components/partials/map/map.component';
+import { FooterComponent } from './components/partials/footer/footer.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -59,6 +60,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CheckoutPageComponent,
     OrderItemsListComponent,
     MapComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
