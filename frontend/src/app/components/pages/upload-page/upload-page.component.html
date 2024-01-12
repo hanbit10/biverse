@@ -6,8 +6,8 @@
   <div class="layout">
     <title>Upload New Verse</title>
 
-    <div class="form-group">
-      <label for="title">Name</label>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
       <input
         type="text"
         class="form-control"
@@ -15,8 +15,9 @@
         required
         [(ngModel)]="food.name"
         name="name"
+        matInput
       />
-    </div>
+    </mat-form-field>
 
     <label
       class="text-button-radio"
@@ -33,19 +34,16 @@
       {{ x }}
     </label>
 
-    <button (click)="saveFood()" class="btn btn-success">
-      Submit This is important
-    </button>
-
     <div class="row-button" [align]="'end'">
       <button
-        class="button button-register"
-        (click)="addProduct()"
+        mat-raised-button
+        color="primary"
+        (click)="saveFood()"
         routerLink="/"
       >
-        REGISTER
+        Submit
       </button>
-      <button mat-dialog-close class="button button-cancel" routerLink="/">
+      <button mat-raised-button mat-dialog-close color="warn" routerLink="/">
         CANCEL
       </button>
     </div>
