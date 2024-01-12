@@ -1,66 +1,71 @@
-header{
+header {
   position: relative;
-  background: white;
   padding: 0;
-  border-bottom: 1px solid #e72929;
+  border-bottom: 1px solid var(--color-primary-variant);
 }
 
-a{
+a {
   color: #af1313;
 }
 
-a:hover{
-  background:#e72929;
+a:hover {
+  background: #e72929;
   color: white;
   cursor: pointer;
 }
 
-.container{
+.container {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
-a.logo{
+a.logo {
   font-weight: bold;
   padding: 1rem;
 }
 
-ul{
+ul {
   display: flex;
   list-style-type: none;
   margin: 0;
 }
 
-ul a{
+ul button {
   padding: 1rem;
   display: inline-block;
+  height: 100%;
 }
 
-a span{
+a span {
   background: #ff4d4d;
   color: white;
   padding: 0.1rem 0.45rem;
   border-radius: 100rem;
-  font-size:0.9rem;
+  font-size: 0.9rem;
 }
 
-.menu-container{
+button {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.menu-container {
   position: relative;
 }
 
-.menu{
-  position:absolute;
-  z-index:1;
-  background:whitesmoke;
+.menu {
+  position: absolute;
+  z-index: 1;
+  background: var(--color-bg);
   display: none;
 }
 
-.menu-container:hover .menu{
+.menu-container:hover .menu {
   display: block;
 }
 
-.menu a{
+.menu button {
   width: 100%;
-  min-width:8rem;
+  min-width: 8rem;
 }

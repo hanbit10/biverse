@@ -17,13 +17,20 @@
   width: 100%;
 }
 
-img {
-  border-bottom: 10px solid brown;
+.loader {
+  margin: auto;
+  border: 20px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 20px solid var(--color-bg-variant);
   width: 200px;
   height: 200px;
+  animation: spinner 4s linear infinite;
 }
-
-h1 {
-  color: brown;
-  text-transform: lowercase;
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

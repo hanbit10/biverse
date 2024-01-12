@@ -3,24 +3,33 @@
     <a routerLink="/" class="logo">Verse Mine! is mine</a>
     <nav>
       <ul>
+        <li *ngIf="isAuth">
+          <button mat-button routerLink="/upload">Upload</button>
+        </li>
         <li>
-          <a routerLink="/upload">Upload</a>
+          <button mat-button color="white" routerLink="/">Verse</button>
+        </li>
+        <li>
+          <button mat-button color="white" routerLink="/">Documents</button>
+        </li>
+        <li>
+          <button mat-button color="white" routerLink="/">Donation</button>
         </li>
         <li *ngIf="!isAuth">
-          <a routerLink="/login">Login</a>
+          <button mat-button routerLink="/login">Login</button>
         </li>
         <li *ngIf="isAuth" class="menu-container">
-          <a routerLink="/dashboard">{{ user.name }}</a>
+          <button mat-button routerLink="/dashboard">{{ user.name }}</button>
           <div class="menu">
-            <a routerLink="/profile">Profile</a>
-            <a routerLink="/orders">Orders</a>
-            <a (click)="logout()">Logout</a>
+            <button mat-button routerLink="/profile">Profile</button>
+            <button mat-button routerLink="/orders">Orders</button>
+            <button mat-button (click)="logout()">Logout</button>
           </div>
         </li>
         <li>
-          <a routerLink="/cart-page">
+          <button mat-button routerLink="/cart-page">
             Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span>
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
