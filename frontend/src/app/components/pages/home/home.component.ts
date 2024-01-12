@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
     let foodsObservalbe: Observable<Food[]>;
     activatedRoute.params.subscribe((params) => {
       if (params['searchTerm'])
-        foodsObservalbe = this.verseService.getAllFoodsBySearchTerm(
+        foodsObservalbe = this.verseService.getAllVersesBySearchTerm(
           params['searchTerm']
         );
       else if (params['tag'])
-        foodsObservalbe = this.verseService.getAllFoodsByTag(params['tag']);
+        foodsObservalbe = this.verseService.getAllVersesByTag(params['tag']);
       else foodsObservalbe = verseService.getAll();
 
       foodsObservalbe.subscribe((serverFoods) => {

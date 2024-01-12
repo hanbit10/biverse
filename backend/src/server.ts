@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["https://biverse.onrender.com"],
+    origin: ["http://localhost:5000"],
   })
 );
 

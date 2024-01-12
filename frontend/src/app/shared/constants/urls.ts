@@ -1,7 +1,7 @@
 import { environment } from 'src/environments/environment';
 
-// const BASE_URL = environment.production? '' : 'http://localhost:5000';
-const BASE_URL = environment.production ? '' : 'https://biverse.onrender.com';
+const BASE_URL = environment.production ? '' : 'http://localhost:5000';
+//const BASE_URL = environment.production ? '' : 'https://biverse.onrender.com';
 
 export const VERSES_URL = BASE_URL + '/api/foods';
 export const VERSES_TAGS_URL = VERSES_URL + '/tags';

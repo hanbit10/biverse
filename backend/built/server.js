@@ -17,7 +17,7 @@ var app = (0, express_1["default"])();
 app.use(express_1["default"].json());
 app.use((0, cors_1["default"])({
     credentials: true,
-    origin: ["https://biverse.onrender.com"]
+    origin: ["http://localhost:5000"]
 }));
 ////////////////////////////////////////////////////
 app.use("/api/foods", food_router_1["default"]);

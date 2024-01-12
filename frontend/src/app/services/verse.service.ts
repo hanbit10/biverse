@@ -22,7 +22,7 @@ export class VerseService {
     return this.http.get<Food[]>(VERSES_URL);
   }
 
-  getAllFoodsBySearchTerm(searchTerm: string) {
+  getAllVersesBySearchTerm(searchTerm: string) {
     return this.http.get<Food[]>(VERSES_BY_SEARCH_URL + searchTerm);
   }
 
@@ -30,13 +30,13 @@ export class VerseService {
     return this.http.get<Tag[]>(VERSES_TAGS_URL);
   }
 
-  getAllFoodsByTag(tag: string): Observable<Food[]> {
+  getAllVersesByTag(tag: string): Observable<Food[]> {
     return tag === 'All'
       ? this.getAll()
       : this.http.get<Food[]>(VERSES_BY_TAG_URL + tag);
   }
 
-  getFoodById(foodId: string): Observable<Food> {
+  getVerseById(foodId: string): Observable<Food> {
     return this.http.get<Food>(VERSE_BY_ID_URL + foodId);
   }
 

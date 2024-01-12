@@ -31,7 +31,7 @@ export class FoodPageComponent implements OnInit {
   ) {
     activatedRoute.params.subscribe((params) => {
       if (params['id'])
-        verseService.getFoodById(params['id']).subscribe((serverFood) => {
+        verseService.getVerseById(params['id']).subscribe((serverFood) => {
           this.food = serverFood;
         });
     });
