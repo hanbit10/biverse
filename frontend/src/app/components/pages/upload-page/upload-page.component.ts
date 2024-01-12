@@ -14,10 +14,23 @@ import { Verse } from 'src/app/shared/models/Verse';
 export class UploadPageComponent {
   cookTimeOption = ['30', '40'];
 
+  verseTags = [
+    'Inspiration',
+    'Grace',
+    'Redemption',
+    'Faith',
+    'Harmony',
+    'Truth',
+    'Hope',
+    'Mercy',
+    'Wisdom',
+    'Love',
+  ];
+
   food: Verse = {
     name: '',
     price: 100,
-    tags: ['dafdsa'],
+    tags: [],
     favorite: false,
     stars: 0,
     imageUrl: 'assets/food-1.jpg',

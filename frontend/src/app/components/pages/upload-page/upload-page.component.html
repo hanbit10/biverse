@@ -19,6 +19,15 @@
       />
     </mat-form-field>
 
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select [(ngModel)]="food.tags" name="tags">
+        <mat-option *ngFor="let tag of verseTags" [value]="tag">{{
+          tag
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
     <label
       class="text-button-radio"
       *ngFor="let x of cookTimeOption"
