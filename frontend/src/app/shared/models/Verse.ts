@@ -1,4 +1,4 @@
-export class Food {
+export class Verse {
   id!: string;
   name?: string;
   price!: number;

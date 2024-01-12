@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Food } from '../shared/models/Food';
+import { Verse } from '../shared/models/Verse';
 //import { sample_foods, sample_tags } from 'src/data';
 import { Tag } from '../shared/models/Tag';
 import { HttpClient } from '@angular/common/http';
@@ -18,29 +18,29 @@ import {
 export class VerseService {
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<Food[]> {
-    return this.http.get<Food[]>(VERSES_URL);
+  getAll(): Observable<Verse[]> {
+    return this.http.get<Verse[]>(VERSES_URL);
   }
 
   getAllVersesBySearchTerm(searchTerm: string) {
-    return this.http.get<Food[]>(VERSES_BY_SEARCH_URL + searchTerm);
+    return this.http.get<Verse[]>(VERSES_BY_SEARCH_URL + searchTerm);
   }
 
   getAllTags(): Observable<Tag[]> {
     return this.http.get<Tag[]>(VERSES_TAGS_URL);
   }
 
-  getAllVersesByTag(tag: string): Observable<Food[]> {
+  getAllVersesByTag(tag: string): Observable<Verse[]> {
     return tag === 'All'
       ? this.getAll()
-      : this.http.get<Food[]>(VERSES_BY_TAG_URL + tag);
+      : this.http.get<Verse[]>(VERSES_BY_TAG_URL + tag);
   }
 
-  getVerseById(foodId: string): Observable<Food> {
-    return this.http.get<Food>(VERSE_BY_ID_URL + foodId);
+  getVerseById(foodId: string): Observable<Verse> {
+    return this.http.get<Verse>(VERSE_BY_ID_URL + foodId);
   }
 
-  create(data: any): Observable<Food> {
-    return this.http.post<Food>(VERSES_URL, data);
+  create(data: any): Observable<Verse> {
+    return this.http.post<Verse>(VERSES_URL, data);
   }
 }

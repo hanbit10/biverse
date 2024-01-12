@@ -1,4 +1,8 @@
-<app-not-found [visible]="!food" notFoundMessage="Food Not Found" resetLinkText="Back To Homepage">
+<app-not-found
+  [visible]="!food"
+  notFoundMessage="Verse Not Found"
+  resetLinkText="Back To Homepage"
+>
 </app-not-found>
 <div *ngIf="food" class="container">
   <img [src]="food.imageUrl" [alt]="food.name" />
@@ -6,41 +10,46 @@
   <div class="details">
     <div class="header">
       <span class="name">
-        {{food.name}}
+        {{ food.name }}
       </span>
-      <span class="favorite {{food.favorite? '': 'not'}}">❤</span>
+      <span class="favorite {{ food.favorite ? '' : 'not' }}">❤</span>
     </div>
     <div class="rating">
-      <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="25px"
-        [readonly]="true">
+      <star-rating
+        [value]="food.stars"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="25px"
+        [readonly]="true"
+      >
       </star-rating>
     </div>
 
     <div class="origins">
       <span *ngFor="let origin of food.origins">
-        {{origin}}
+        {{ origin }}
       </span>
     </div>
 
     <div class="tags">
-      <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
-        {{tag}}
+      <a *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">
+        {{ tag }}
       </a>
     </div>
 
     <div class="cook-time">
       <span>
-        Time to cook about <strong>{{food.cookTime}}</strong> minutes
+        Time to cook about <strong>{{ food.cookTime }}</strong> minutes
       </span>
     </div>
 
     <div class="price">
       <span>
-        {{food.price | currency}}
+        {{ food.price | currency }}
       </span>
     </div>
 
     <button (click)="addToCart()">Add To Cart</button>
-
   </div>
 </div>

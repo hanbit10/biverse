@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-export interface Food {
+export interface Verse {
   id: string;
   name: string;
   price: number;
@@ -12,7 +12,7 @@ export interface Food {
   cookTime: string;
 }
 
-export const FoodSchema = new Schema<Food>(
+export const FoodSchema = new Schema<Verse>(
   {
     name: { type: String, required: true },
     price: { type: Number, required: true },
@@ -34,4 +34,4 @@ export const FoodSchema = new Schema<Food>(
   }
 );
 
-export const FoodModel = model<Food>("food", FoodSchema);
+export const FoodModel = model<Verse>("food", FoodSchema);

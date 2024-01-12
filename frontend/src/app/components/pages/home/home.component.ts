@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { VerseService } from 'src/app/services/verse.service';
-import { Food } from 'src/app/shared/models/Food';
+import { Verse } from 'src/app/shared/models/Verse';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +10,13 @@ import { Food } from 'src/app/shared/models/Food';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  foods: Food[] = [];
+  foods: Verse[] = [];
 
   constructor(
     private verseService: VerseService,
     activatedRoute: ActivatedRoute
   ) {
-    let foodsObservalbe: Observable<Food[]>;
+    let foodsObservalbe: Observable<Verse[]>;
     activatedRoute.params.subscribe((params) => {
       if (params['searchTerm'])
         foodsObservalbe = this.verseService.getAllVersesBySearchTerm(

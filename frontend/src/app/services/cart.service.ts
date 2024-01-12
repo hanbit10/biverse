@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Cart } from '../shared/models/Cart';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Food } from '../shared/models/Food';
+import { Verse } from '../shared/models/Verse';
 import { CartItem } from '../shared/models/CartItem';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class CartService {
 
   constructor() {}
 
-  addToCart(food: Food): void {
+  addToCart(food: Verse): void {
     let cartItem = this.cart.items.find((item) => item.food.id === food.id);
     if (cartItem) {
       return;

@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
 import { VerseService } from 'src/app/services/verse.service';
-import { Food } from 'src/app/shared/models/Food';
+import { Verse } from 'src/app/shared/models/Verse';
 
 @Component({
   selector: 'app-upload-page',
@@ -14,7 +14,7 @@ import { Food } from 'src/app/shared/models/Food';
 export class UploadPageComponent {
   cookTimeOption = ['30', '40'];
 
-  food: Food = {
+  food: Verse = {
     name: '',
     price: 100,
     tags: ['dafdsa'],
@@ -31,7 +31,7 @@ export class UploadPageComponent {
     activatedRoute: ActivatedRoute,
     private verseService: VerseService
   ) {
-    // let foodsObservalbe: Observable<Food[]>;
+    // let foodsObservalbe: Observable<Verse[]>;
     // activatedRoute.params.subscribe((params) => {
     //   if (params['searchTerm'])
     //     foodsObservalbe = this.verseService.getAllVersesBySearchTerm(

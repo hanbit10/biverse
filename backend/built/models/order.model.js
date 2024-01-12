@@ -31,4 +31,4 @@ var orderSchema = new mongoose_1.Schema({
         virtuals: true
     }
 });
-exports.OrderModel = (0, mongoose_1.model)('order', orderSchema);
+exports.OrderModel = (0, mongoose_1.model)("order", orderSchema);

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { VerseService } from 'src/app/services/verse.service';
-import { Food } from 'src/app/shared/models/Food';
+import { Verse } from 'src/app/shared/models/Verse';
 
 @Component({
   selector: 'app-food-page',
@@ -10,7 +10,7 @@ import { Food } from 'src/app/shared/models/Food';
   styleUrls: ['./food-page.component.scss'],
 })
 export class FoodPageComponent implements OnInit {
-  food!: Food;
+  food!: Verse;
 
   // constructor(
   //   activatedRoute: ActivatedRoute,

@@ -1,7 +1,7 @@
-import { Food } from './app/shared/models/Food';
+import { Verse } from './app/shared/models/Verse';
 import { Tag } from './app/shared/models/Tag';
 
-export const sample_foods: Food[] = [
+export const sample_foods: Verse[] = [
   {
     id: '1',
     name: 'Pizza Pepperoni',
