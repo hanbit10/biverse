@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
-import { FoodService } from 'src/app/services/food.service';
+import { VerseService } from 'src/app/services/verse.service';
 import { Food } from 'src/app/shared/models/Food';
 
 @Component({
@@ -29,17 +29,17 @@ export class UploadPageComponent {
   constructor(
     private formBuilder: FormBuilder,
     activatedRoute: ActivatedRoute,
-    private foodService: FoodService
+    private verseService: VerseService
   ) {
     // let foodsObservalbe: Observable<Food[]>;
     // activatedRoute.params.subscribe((params) => {
     //   if (params['searchTerm'])
-    //     foodsObservalbe = this.foodService.getAllFoodsBySearchTerm(
+    //     foodsObservalbe = this.verseService.getAllFoodsBySearchTerm(
     //       params['searchTerm']
     //     );
     //   else if (params['tag'])
-    //     foodsObservalbe = this.foodService.getAllFoodsByTag(params['tag']);
-    //   else foodsObservalbe = foodService.getAll();
+    //     foodsObservalbe = this.verseService.getAllFoodsByTag(params['tag']);
+    //   else foodsObservalbe = verseService.getAll();
     //   foodsObservalbe.subscribe((serverFoods) => {
     //     this.foods = serverFoods;
     //   });
@@ -58,7 +58,7 @@ export class UploadPageComponent {
       cookTime: this.food.cookTime,
     };
 
-    this.foodService.create(data).subscribe({
+    this.verseService.create(data).subscribe({
       next: (res) => {
         console.log(res);
       },

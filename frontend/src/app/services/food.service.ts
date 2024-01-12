@@ -15,7 +15,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class FoodService {
+export class VerseService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Food[]> {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
-import { FoodService } from 'src/app/services/food.service';
+import { VerseService } from 'src/app/services/verse.service';
 import { Food } from 'src/app/shared/models/Food';
 
 @Component({
@@ -14,24 +14,24 @@ export class FoodPageComponent implements OnInit {
 
   // constructor(
   //   activatedRoute: ActivatedRoute,
-  //   foodService: FoodService,
+  //   verseService: VerseService,
   //   private cartService: CartService,
   //   private router: Router
   // ) {
   //   activatedRoute.params.subscribe((params) => {
-  //     if (params['id']) this.food = foodService.getFoodByID(params['id']);
+  //     if (params['id']) this.food = verseService.getFoodByID(params['id']);
   //   });
   // }
 
   constructor(
     activatedRoute: ActivatedRoute,
-    foodService: FoodService,
+    verseService: VerseService,
     private cartService: CartService,
     private router: Router
   ) {
     activatedRoute.params.subscribe((params) => {
       if (params['id'])
-        foodService.getFoodById(params['id']).subscribe((serverFood) => {
+        verseService.getFoodById(params['id']).subscribe((serverFood) => {
           this.food = serverFood;
         });
     });
