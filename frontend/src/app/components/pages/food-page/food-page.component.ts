@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { VerseService } from 'src/app/services/verse.service';
 import { Verse } from 'src/app/shared/models/Verse';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-food-page',
@@ -26,6 +27,7 @@ export class FoodPageComponent implements OnInit {
   constructor(
     activatedRoute: ActivatedRoute,
     verseService: VerseService,
+
     private cartService: CartService,
     private router: Router
   ) {
